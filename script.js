@@ -12,7 +12,6 @@ function addMessage(text, sender) {
     sender === "user" ? "user-message" : "ai-message"
   );
   if (sender === "ai") {
-    // AI ဖြစ်ရင် Markdown ပုံစံပြောင်းပေးမယ်
     div.innerHTML = marked.parse(text);
   } else {
     div.innerText = text;
@@ -40,7 +39,6 @@ async function sendMessage() {
   chatBox.appendChild(loadingDiv);
 
   try {
-    // FIX: Model နာမည်ကို 'gemini-pro' သို့ ပြောင်းထားပါသည်
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
     const response = await fetch(url, {
