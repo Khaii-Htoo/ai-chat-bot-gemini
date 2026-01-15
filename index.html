@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini AI Chat</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+  </head>
+  <body>
+    <div class="chat-container">
+      <header>
+        <h1>Gemini AI Chat</h1>
+        <div class="api-key-container">
+          <input
+            type="password"
+            id="api-key-input"
+            placeholder="Paste your API Key here..."
+          />
+        </div>
+      </header>
+
+      <div id="chat-box" class="chat-box">
+        <div class="message ai-message">
+          Hello! I am Gemini. Paste your API key above to start chatting.
+        </div>
+      </div>
+
+      <div class="input-area">
+        <textarea id="user-input" placeholder="Type a message..."></textarea>
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
